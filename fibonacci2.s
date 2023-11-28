@@ -17,6 +17,12 @@ loop1:
 bgt $t0,24,find_fibonacci       #Branch if the value in $t0 is greater than 24 to the 'find_fibonacci' label
 
 li$v0,4                         #Load immediate value 4 into $v0
+la$a0,error_msg                   #Load address of the 'error_msg' message into $a0
+syscall                         #Invoke syscall to print the error_msg 
+
+li$v0,4                         #Load immediate value 4 into $v0
 la$a0,prompt                    #Load address of the 'prompt' message into $a0
 syscall                         #Invoke syscall to print the prompt message
+
+
 
