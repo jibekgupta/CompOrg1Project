@@ -24,5 +24,10 @@ li$v0,4                         #Load immediate value 4 into $v0
 la$a0,prompt                    #Load address of the 'prompt' message into $a0
 syscall                         #Invoke syscall to print the prompt message
 
+li$v0,5                         #Load immediate value 5 into $v0
+syscall                         #Invoke syscall to read an integer from input
+move$t0,$v0                     #Move the input value from $v0 to $t0
+
+j loop1                         #Unconditionally jump to the 'loop1' label
 
 
