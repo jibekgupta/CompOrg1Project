@@ -38,3 +38,8 @@ lit1,1                          #Load immediate value 1 into $t1
 move$t3,$a0                     #Move the value in $a0 to $t3
 sub$t4,$t3,2                    #Subtract 2 from the value in $t3 and store the result in $t4                 
 
+li$t5,0                         #Load immediate value 0 into $t5
+li$v0,1                         #Load immediate value 1 into $v0
+move$a0,$t0                     #Move the value in $t0 to $a0
+syscall                         #Invoke syscall to print the integer value in $a0
+
