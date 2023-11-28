@@ -43,3 +43,6 @@ li$v0,1                         #Load immediate value 1 into $v0
 move$a0,$t0                     #Move the value in $t0 to $a0
 syscall                         #Invoke syscall to print the integer value in $a0
 
+li$v0,4                         #Load immediate value 4 into $v0
+la$a0,newline                   #Load address of the 'newline' string into $a0
+syscall                         #Invoke syscall to print the newline string
