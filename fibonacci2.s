@@ -61,3 +61,10 @@ add $t2,$t0,$t1                 #Add values in $t0 and $t1, storing the result i
 add $t0,$zero,$t1               #Move the value in $t1 to $t0
 add$t1,$zero,$t2                #Move the value in $t2 to $t1
 
+li$v0,1                         # Load immediate value 1 into $v0
+move$a0,$t2                     #Move the value in $t2 to $a0
+syscall                         #Invoke syscall to print the integer value in $a0
+
+li$v0,4                         #Load immediate value 4 into $v0
+la$a0,newline                   #Load address of the 'newline' string into $a0
+syscall                         #Invoke syscall to print the newline character
