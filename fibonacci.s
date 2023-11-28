@@ -5,7 +5,7 @@ error_msg: .asciiz "Illegal Number!\n"
 .text
 .globl main
 
-main:
+
 # Print the string stored at the 'prompt' memory location
 li$v0,4
 la $a0, prompt
@@ -28,4 +28,4 @@ li$v0,4                 #Load immediate value 4 into $v0
 la$a0, error_msg        #Load address of the 'error_msg' string into $a0
 syscall                 #Invoke syscall to print the error message
 
-jget_input              #Jump (unconditional) to the 'get_input' label
+j get_input              #Jump (unconditional) to the 'get_input' label
