@@ -29,3 +29,4 @@ la$a0, error_msg        #Load address of the 'error_msg' string into $a0
 syscall                 #Invoke syscall to print the error message
 
 j get_input              #Jump (unconditional) to the 'get_input' label
+
