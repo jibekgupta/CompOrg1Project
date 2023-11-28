@@ -30,4 +30,11 @@ move$t0,$v0                     #Move the input value from $v0 to $t0
 
 j loop1                         #Unconditionally jump to the 'loop1' label
 
+find_fibonacci:
+move$a0,$v0                     #Move the value in register $v0 to $a0
+li$t0,0                         #Load immediate value 0 into $t0
+lit1,1                          #Load immediate value 1 into $t1
+
+move$t3,$a0                     #Move the value in $a0 to $t3
+sub$t4,$t3,2                    #Subtract 2 from the value in $t3 and store the result in $t4                 
 
