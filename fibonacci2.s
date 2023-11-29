@@ -1,9 +1,10 @@
 .data
 prompt: .asciiz "Enter any positive integer N(N >=25):"         #Prompt for user input of a positive integer N (N >= 25)
 error_msg: .asciiz "Illegal Number!\n"          #Message indicating an illegal number
+newline: .asciiz"\n"
 
 .text
-.globl main         #The entry point of the program
+main:
 
 li$v0,4             #Load immediate value 4 into $v0
 la$a0,prompt        #Load address of the 'prompt' message into $a0
@@ -33,7 +34,7 @@ j loop1                         #Unconditionally jump to the 'loop1' label
 find_fibonacci:
 move$a0,$v0                     #Move the value in register $v0 to $a0
 li$t0,0                         #Load immediate value 0 into $t0
-lit1,1                          #Load immediate value 1 into $t1
+li$t1,1                          #Load immediate value 1 into $t1
 
 move$t3,$a0                     #Move the value in $a0 to $t3
 sub$t4,$t3,2                    #Subtract 2 from the value in $t3 and store the result in $t4                 
