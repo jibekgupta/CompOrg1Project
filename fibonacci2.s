@@ -68,3 +68,10 @@ syscall                         #Invoke syscall to print the integer value in $a
 li$v0,4                         #Load immediate value 4 into $v0
 la$a0,newline                   #Load address of the 'newline' string into $a0
 syscall                         #Invoke syscall to print the newline character
+
+addi$t5,$t5,1                   #Add immediate value 1 to $t5
+j loop2                         #Unconditionally jump to 'loop2'
+
+end_program:                    
+li$v0,10                        #Load immediate value 10 into $v0
+syscall                         #Invoke syscall to terminate the program
